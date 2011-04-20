@@ -1,0 +1,106 @@
+8
+
+dir
+16
+http://svn.reprojected.com/cugos/website/cugos_main
+http://svn.reprojected.com/cugos
+
+
+
+2009-07-22T20:43:57.484478Z
+15
+aaronr
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c53cfe08-9b67-0410-a428-b46fcc5bb52c
+
+admin.py
+file
+
+
+
+
+2009-07-22T20:45:27.000000Z
+26bb92bbb88b4d321ef45932099450a7
+2009-07-22T20:43:57.484478Z
+15
+aaronr
+
+views.py
+file
+
+
+
+
+2009-07-22T20:45:27.000000Z
+157503a6d6b7d5e761c24ead3a7a3c9e
+2009-07-22T20:43:57.484478Z
+15
+aaronr
+
+shortcuts.py
+file
+
+
+
+
+2009-04-15T18:05:51.000000Z
+e8cc9502d66988cf6a7a62d287de8d0c
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+
+__init__.py
+file
+
+
+
+
+2009-04-15T18:05:51.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+
+fixtures
+dir
+
+templatetags
+dir
+
+models.py
+file
+
+
+
+
+2009-07-22T20:45:27.000000Z
+e3f85474913c7df3bcaf01b542cd0bab
+2009-07-22T20:43:57.484478Z
+15
+aaronr
+
+forms.py
+file
+
+
+
+
+2009-04-15T18:05:51.000000Z
+e88c2b292207e7a970162e71fd9d379e
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+

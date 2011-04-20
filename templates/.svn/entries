@@ -1,0 +1,106 @@
+8
+
+dir
+16
+http://svn.reprojected.com/cugos/website/templates
+http://svn.reprojected.com/cugos
+
+
+
+2009-07-22T20:43:57.484478Z
+15
+aaronr
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c53cfe08-9b67-0410-a428-b46fcc5bb52c
+
+kml
+dir
+
+profiles
+dir
+
+cugos_main
+dir
+
+base_blank.html
+file
+
+
+
+
+2009-04-15T18:05:53.000000Z
+1e09384d3ce68fc876d3f6a554c4ab1c
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+
+feeds
+dir
+
+500.html
+file
+
+
+
+
+2009-04-15T18:05:53.000000Z
+58a1a7e241ec36a67b4adbc3615caffd
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+
+admin
+dir
+
+cugos_projects
+dir
+
+batchadmin
+dir
+
+cugos_about
+dir
+
+registration
+dir
+
+404.html
+file
+
+
+
+
+2009-04-15T18:05:53.000000Z
+a65cf3e7571f7a9393340b0bd93da259
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+
+cugos_usermap
+dir
+
+base.html
+file
+
+
+
+
+2009-07-22T20:45:27.000000Z
+4be187aaf4487c614bbf0459fa8794b2
+2009-07-22T20:03:11.090363Z
+14
+pugetworks
+

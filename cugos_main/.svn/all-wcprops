@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/cugos/!svn/ver/15/website/cugos_main
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/cugos/!svn/ver/15/website/cugos_main/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/cugos/!svn/ver/15/website/cugos_main/views.py
+END
+shortcuts.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/cugos/!svn/ver/7/website/cugos_main/shortcuts.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/cugos/!svn/ver/7/website/cugos_main/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/cugos/!svn/ver/15/website/cugos_main/models.py
+END
+forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/cugos/!svn/ver/7/website/cugos_main/forms.py
+END

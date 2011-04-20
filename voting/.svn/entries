@@ -1,0 +1,99 @@
+8
+
+dir
+69
+http://django-voting.googlecode.com/svn/trunk/voting
+http://django-voting.googlecode.com/svn
+
+
+
+2008-11-06T23:23:35.817879Z
+69
+jonathan.buchanan
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+662f01ad-f42a-0410-a340-718c64ddaef4
+
+admin.py
+file
+
+
+
+
+2009-03-25T21:11:08.000000Z
+f9c494ddc0ca428c9ca5aea10b72531f
+2008-11-05T03:57:03.146799Z
+65
+jonathan.buchanan
+has-props
+
+tests
+dir
+
+managers.py
+file
+
+
+
+
+2009-03-25T21:11:08.000000Z
+57a145616cacf2b9b0515513e02aef58
+2008-11-06T23:23:35.817879Z
+69
+jonathan.buchanan
+has-props
+
+views.py
+file
+
+
+
+
+2009-03-25T21:11:08.000000Z
+d36dc51f938b335d19375dff57a34713
+2008-11-05T03:57:03.146799Z
+65
+jonathan.buchanan
+has-props
+
+__init__.py
+file
+
+
+
+
+2009-03-25T21:11:08.000000Z
+e8620b783faf864c1599c2800083f136
+2007-08-20T10:00:07.810864Z
+58
+jonathan.buchanan
+has-props
+
+templatetags
+dir
+
+models.py
+file
+
+
+
+
+2009-03-25T21:11:08.000000Z
+97e98c5a735e199874b80840897e20c8
+2008-11-05T03:57:03.146799Z
+65
+jonathan.buchanan
+has-props
+

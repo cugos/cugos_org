@@ -1,0 +1,1 @@
+dropdb cugos -U postgres

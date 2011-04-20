@@ -1,0 +1,36 @@
+Index: admin.py
+===================================================================
+--- admin.py	(revision 76)
++++ admin.py	(working copy)
+@@ -1,4 +1,4 @@
+-from django.contrib import admin
++from django.contrib.gis import admin
+ from django.http import HttpResponse, HttpResponseRedirect
+ from django.utils.safestring import mark_safe
+ from django.utils.text import capfirst
+@@ -6,9 +6,9 @@
+ from batchadmin.util import model_format_dict, model_ngettext, get_changelist
+ 
+ 
+-class BatchModelAdmin(admin.ModelAdmin):
++class BatchModelAdmin(admin.OSMGeoAdmin):
+     change_list_template = "batchadmin/change_list.html"
+-    list_display = ['batchadmin_checkbox'] + list(admin.ModelAdmin.list_display)
++    list_display = ['batchadmin_checkbox'] + list(admin.OSMGeoAdmin.list_display)
+     batch_actions = ['delete_selected']
+     batch_action_form = ActionForm
+     actions_on_top = True
+Index: util.py
+===================================================================
+--- util.py	(revision 76)
++++ util.py	(working copy)
+@@ -1,7 +1,7 @@
+-from django.db import models
++from django.contrib.gis.db import models
+ from django.utils.translation import ungettext
+ from django.utils.encoding import force_unicode
+-from django.contrib import admin
++from django.contrib.gis import admin
+ from django.contrib.admin.views.main import ChangeList
+ 
+ 

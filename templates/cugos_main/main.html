@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block extrajs %}
+	<script type="text/javascript">
+		Cufon.replace('h1,h2,.nevis');
+		
+		jQuery(function(){
+			var events = jQuery("#events");
+			jQuery("li:even",events).addClass("even");
+		});
+		
+		Cufon.now(); 
+		jQuery("#loading").show();
+	</script>
+	<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+	<script type="text/javascript" src="/media/js/openlayers/OpenStreetMap.js"></script>
+	<script type="text/javascript" src="/media/js/init_map.js"></script>
+{% endblock %}
+
+<!-- Onload call in the HTML body that kicks off the javascript for the map -->
+{% block body_load%}onload="init_map();"{% endblock%}
+{% block content %}
+		<div id="left">
+			<div class="section">
+				<div id="map"></div>
+				<div id="loading" style="display:none">
+					<img src="/media/images/loading.gif" alt="Loading">
+				</div>
+				<h2>Usermap (Points to come!)</h2>
+				<p>This map shows the location of CUGOS members throughout the region. It’s also an 
+					example of the kind of application you can easily create using only free, open 
+					source technologies!</p>
+			</div>
+			<div class="section noBorder">
+				<h2>Projects</h2>
+				<p>CUGOS tries to maintain active Geo-Spatial projects to help engage the community, 
+					sharpen our skills, and provide unique hands on learning. Listed below are some of 
+					the currently active projects sponsored by CUGOS: </p>
+				<h3 class="nevis">Roadflaw</h3>
+				<div class="screenshot floatRight">
+					<img src="media/images/roadflaw-screen.png" width="165" height="142" alt="Roadflaw Screen">
+					<h3 class="nevis">Check out Roadflaw</h3>
+					<a href="http://www.roadflaw.com/map/" title="Click to go to Roadflaw"  >
+						http://www.roadflaw.com/map/</a>
+				</div>
+				<p>The purpose of roadflaw.com is to provide Seattle, WA area residents with a web 
+					application to comment on transportation issues.Issues can be any problem from a 
+					pot hole to a bridge that needs to be constructed. The secondary purpose of this 
+					project is to provide a learning experience for technology enthusiasts to practice 
+					their skills with mapping, and web applications. This project will be built over 
+					the course of many weekends and when people feel like contributing.</p>
+			</div>
+		</div>
+		<div id="center">
+			<div class="section">
+				<h2>Mailing List</h2>
+				<p>Visit the <a href="http://groups.google.com/group/cugos">CUGOS Google Groups</a>
+				 page to sign up for the mailing list!</p>
+			</div>
+			<div class="section">
+				<h2>Meetings</h2>
+				<p>Be sure to attend one of our monthly meetings as well. We meet at offices 
+					of <a href="http://lizardtech.com/company/contact.php">LizardTech</a> 
+					in downtown Seattle on the 3rd Wednesday of every month at 6pm.</p>
+			</div>
+			<div class="section noBorder">
+				<h2>Events</h2>
+				<ul id="events">
+				  {% for field in events %}
+					<li>
+						<h3>{{field.name}}</h3>
+						<p>{{field.description}}</p>
+						<em><a href="{{field.url}}">{{field.url}}</a></em>
+					</li>
+				  {% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div id="right">
+			<div class="section">
+				<h2>Mission</h2>
+				<p>The OSGeo Cascadia Chapter strives to provide support for local users of Open 
+					Source Geospatial software, and to promote the goals and projects of the Open 
+					Source Geospatial Foundation. The Chapter is focused on the Pacific Northwest 
+					region of the United States as well as Southern British Columbia. The group 
+					hosts meetings providing networking, support and educational opportunities to 
+					the local members.
+			</div>
+			<div class="section noBorder">
+				<h2>History</h2>
+				<p>Started in February 2007, CUGOS has quickly grown from a core of three 
+					founders to a mailing list of over 100 active members. Loosely based on the 
+					FRUGOS group, we have held monthly meetings since inception and are active in 
+					local, regional and international FOSS GIS activities. In its second year 
+					the group has started to branch out into other activities such as hosting code 
+					sprints and actively working toward hosting a regional FOSS4G mini-conference.</p>
+					<a href="http://www.osgeo.org/" title="Open Source Geospatial Foundation" >
+						<img src="media/images/osgeo-logo.png" width="162" height="67" alt="OSGeo Logo">
+					</a>
+			</div>
+		</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+8
+
+dir
+16
+http://svn.reprojected.com/cugos/website/batchadmin/templates/batchadmin
+http://svn.reprojected.com/cugos
+
+
+
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c53cfe08-9b67-0410-a428-b46fcc5bb52c
+
+actions.html
+file
+
+
+
+
+2009-04-15T18:05:52.000000Z
+33a5cd2166dfe436447fd0891591b1e5
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+
+change_list.html
+file
+
+
+
+
+2009-04-15T18:05:52.000000Z
+ecc1a9e2f4922bb29339a421842362b3
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+

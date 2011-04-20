@@ -1,0 +1,53 @@
+8
+
+dir
+16
+http://svn.reprojected.com/cugos/website/registration/locale/en/LC_MESSAGES
+http://svn.reprojected.com/cugos
+
+
+
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c53cfe08-9b67-0410-a428-b46fcc5bb52c
+
+django.po
+file
+
+
+
+
+2009-04-15T18:05:53.000000Z
+7663cc9ae5db179c2c4f1b1286d72773
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+
+django.mo
+file
+
+
+
+
+2009-04-15T18:05:53.000000Z
+0e1999a51a7a8296898bdfeefc6198ca
+2009-04-15T18:03:49.174162Z
+7
+aaronr
+has-props
+

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/cugos/!svn/ver/7/website/templates/profiles
+END
+profile_detail.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/cugos/!svn/ver/7/website/templates/profiles/profile_detail.html
+END
+create_profile.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/cugos/!svn/ver/7/website/templates/profiles/create_profile.html
+END
+edit_profile.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/cugos/!svn/ver/7/website/templates/profiles/edit_profile.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/cugos/!svn/ver/7/website/templates/profiles/base.html
+END
+profile_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/cugos/!svn/ver/7/website/templates/profiles/profile_list.html
+END

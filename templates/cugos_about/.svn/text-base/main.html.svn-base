@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block extrajs %}
+<script src="/media/js/jquery.js" type="text/javascript"></script>
+<script src="/media/js/jquery-ui.js" type="text/javascript"></script>
+{% endblock %}
+
+<!-- Onload call in the HTML body that kicks off the javascript for the map -->
+{% block body_load%}{% endblock%}
+{% block content %}
+<h1><b>History: </b></h1><h3 id="blurb">Started in February 2007, CUGOS has quickly grown from a core of three founders to a mailing list of over 100 active members. Loosely based on the FRUGOS group, we have held monthly meetings since inception and are active in local, regional and international FOSS GIS activities. In it's second year the group has started to branch out into other activities such as hosting code sprints and actively working toward hosting a regional FOSS4G mini-conference.</h3><br>
+<h1><b>Mission: </b></h1><h3 id="blurb">The OSGeo Cascadia Chapter strives to provide support for local users of Open Source Geospatial software, and to promote the goals and projects of the Open Source Geospatial Foundation. The Chapter is focused on the Pacific Northwest region of the United States as well as Southern British Columbia. The group hosts meetings providing networking, support and educational opportunities to the local members. </h3><br>
+
+{% endblock %}

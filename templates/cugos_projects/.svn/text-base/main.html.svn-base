@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block extrajs %}
+<script src="/media/js/jquery.js" type="text/javascript"></script>
+<script src="/media/js/jquery-ui.js" type="text/javascript"></script>
+{% endblock %}
+
+<!-- Onload call in the HTML body that kicks off the javascript for the map -->
+{% block body_load%}{% endblock%}
+{% block content %}
+CUGOS tries to maintain active Geo-Spatial projects to help engage the community, sharpen our skills, and provide unique hands on learning.  Listed below are some of the currently active projects sponsored by CUGOS:
+<br>
+<br>
+{% for field in projects %}
+<div style="background-color:#d0d0d0;padding:10px 10px;">
+<h1><b>{{field.name}}</b></h1>
+<h3>{{field.description}}</h3>
+<a href="{{field.url}}">{{field.url}}</a>
+</div>
+&nbsp;&nbsp;
+{% endfor %}
+{% endblock %}
