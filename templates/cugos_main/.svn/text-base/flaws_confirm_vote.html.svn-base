@@ -1,6 +1,0 @@
-{% extends "base_blank.html" %}
-
-
-{% block content %}
-Thanks for voting!
-{% endblock %}
