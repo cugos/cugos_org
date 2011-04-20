@@ -1,0 +1,1 @@
+python manage.py dumpdata --format=xml users > users/fixtures/initial_data.xml

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Sets the django 'settings.py' file before running 
+# a custom python script from the command line
+
+# Usage::
+#  To make executable do:
+#  $ chmod +x runpy
+#  
+#  Then to run a script do:
+#  $ ./runpy ../add_merc.py
+#
+#  To enter a python terminal:
+#  $ ./runpy # does the same thing as manage.py
+
+
+export DJANGO_SETTINGS_MODULE=settings
+python $@
