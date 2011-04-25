@@ -1,0 +1,13 @@
+# Links  #
+##########
+admin-media
+
+# EMACS  #
+##########
+*.*~
+
+# Compiled source #
+###################
+*.o
+*.so
+*.pyc
