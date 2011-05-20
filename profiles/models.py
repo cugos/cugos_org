@@ -11,6 +11,8 @@ class UserProfile(models.Model):
     user = models.ForeignKey(User,verbose_name=_('Username'))
     address = models.CharField(_('Address'),null=True,blank=True,max_length=100)
     uid = models.IntegerField(_('Random User ID'),null=True,blank=True,)
+    geometry = models.PointField(srid=4326)
+    objects = models.GeoManager()
 
     def __unicode__(self):
         name = self.user.get_full_name()
