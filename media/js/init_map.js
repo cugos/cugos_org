@@ -1,4 +1,4 @@
-function init_map(){
+function init_map(members) {
 	// Show the loading indicator first
 	var map_options = { 
     'units' : "m",
@@ -9,13 +9,25 @@ function init_map(){
     'maxExtent' : new OpenLayers.Bounds(-20037508,-20037508,20037508,20037508)
 	};
 	    
-  var map = new OpenLayers.Map('map', map_options);
+	var data = {
+              "type": "FeatureCollection", 
+              "features": members
+	};
+  	var map = new OpenLayers.Map('map', map_options);
 	
 	map.layers.base = new OpenLayers.Layer.OSM.Mapnik("OpenStreetMap (Mapnik)");
-  map.addLayer(map.layers.base);
-  map.addControl(new OpenLayers.Control.LayerSwitcher());
-	map.setCenter(new OpenLayers.LonLat(-122.29, 47.65).transform(new OpenLayers.Projection("EPSG:4326"),
-	new OpenLayers.Projection("EPSG:900913")),6);
+	map.addLayer(map.layers.base);
+  	map.addControl(new OpenLayers.Control.LayerSwitcher());
+  	var toGoog = function (lonlat){
+  		return lonlat.transform(new OpenLayers.Projection("EPSG:4326"),
+			new OpenLayers.Projection("EPSG:900913"));
+  	}
+	var gj = new OpenLayers.Format.GeoJSON();
+   	var vector = new OpenLayers.Layer.Vector(); 
+   	map.addLayer(vector);
+   	vector.addFeatures(gj.read(data));
+  	var center = toGoog(new OpenLayers.LonLat(-122.29, 47.65));
+	map.setCenter(center,6);
 	map.updateSize();
 
 	//Hide the loading div

@@ -18,7 +18,7 @@
 {% endblock %}
 
 <!-- Onload call in the HTML body that kicks off the javascript for the map -->
-{% block body_load%}onload="init_map();"{% endblock%}
+{% block body_load%}onload="init_map({{ profiles }});"{% endblock%}
 {% block content %}
 		<div id="left">
 			<div class="section">

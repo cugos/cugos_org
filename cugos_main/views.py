@@ -18,7 +18,7 @@ from django.contrib.gis.geos import Point
 
 # Models and forms for our app
 from cugos_main.models import *
-from cugos_main.forms import *
+from profiles.models import *
 from cugos_main.shortcuts import render_to_geojson
 
 from shapes.views import ShpResponder
@@ -39,14 +39,6 @@ import urllib
 #			response['Content-Type'] = "text/plain"
 #			return response
 
-
-def shape(request):
-    qs = Flaws.objects.all()
-    shp_response = ShpResponder(qs)
-    shp_response.readme = 'This is a string of a readme\nplease read this.'
-    shp_response.file_name = 'Roadflaw Data'
-    #shp_response.geo_field = 'geometry'
-    return shp_response()
 
 def lookup(request):
     output_format='json'
@@ -77,43 +69,21 @@ def lookup(request):
 def splash(request):
     return render_to_response('splash.html', {})
 
-
-class LatestFlaws(Feed):
-    title = "Roadflaw.com Flaw Feed"
-    link = "/sites/rss/latest/"
-    description = "Latest Flaws via Roadflaw.com"
-
-    def items(self):
-        return Flaws.objects.order_by('-id')[:10]
-
 def main_page(request):
     # Fetch the first 3 events... need to add the order by date
+    m = [x.geometry.geojson for x in UserProfile.objects.all()]
     e = Event.objects.count()
     events = Event.objects.all()[:3]
-    f = Flaws.objects.count()
-    if f > 3:
-      flaws = Flaws.objects.all()
-      dissolved = flaws.unionagg()
-      dissolved.transform(900913)
-      extent = dissolved.extent
-    else:
-      extent = '(-13644621.04,6028561.02, -13598758.82,6057607.09)'
+    extent = '(-13644621.04,6028561.02, -13598758.82,6057607.09)'
     if request.method == 'GET' and request.GET.get('extent'):
       extent_string = request.GET.get('extent')
       extent = tuple(map(float,extent_string.split(',')))
-    template_vars = {'extent' : extent, 'GMAP_API_KEY': settings.GMAP_API_KEY,'enable_maps':settings.ENABLE_GMAPS, 'events' : events}
+    template_vars = {'extent' : extent, 'GMAP_API_KEY': settings.GMAP_API_KEY,'enable_maps':settings.ENABLE_GMAPS, 'events' : events, 'profiles': str(m)}
     context = RequestContext(request,template_vars)
     return render_to_response('cugos_main/main.html',context)
 
 def user_map(request):
-    f = Flaws.objects.count()
-    if f > 3:
-      flaws = Flaws.objects.all()
-      dissolved = flaws.unionagg()
-      dissolved.transform(900913)
-      extent = dissolved.extent
-    else:
-      extent = '(-13644621.04,6028561.02, -13598758.82,6057607.09)'
+    extent = '(-13644621.04,6028561.02, -13598758.82,6057607.09)'
     if request.method == 'GET' and request.GET.get('extent'):
       extent_string = request.GET.get('extent')
       extent = tuple(map(float,extent_string.split(',')))
@@ -136,14 +106,7 @@ def events(request):
     return render_to_response('cugos_projects/main.html',context)
 
 def about(request):
-    f = Flaws.objects.count()
-    if f > 3:
-      flaws = Flaws.objects.all()
-      dissolved = flaws.unionagg()
-      dissolved.transform(900913)
-      extent = dissolved.extent
-    else:
-      extent = '(-13644621.04,6028561.02, -13598758.82,6057607.09)'
+    extent = '(-13644621.04,6028561.02, -13598758.82,6057607.09)'
     if request.method == 'GET' and request.GET.get('extent'):
       extent_string = request.GET.get('extent')
       extent = tuple(map(float,extent_string.split(',')))
@@ -151,49 +114,3 @@ def about(request):
     context = RequestContext(request,template_vars)
     return render_to_response('cugos_about/main.html',context)
 
-@login_required
-def post_flaw(request):
-    f = Flaws.objects.count()
-    if f > 3:
-      flaws = Flaws.objects.all()
-      dissolved = flaws.unionagg()
-      dissolved.transform(900913)
-      extent = dissolved.extent
-    else:
-      extent = '(-13644621.04,6028561.02, -13598758.82,6057607.09)'
-    if request.method == 'POST':
-        form = AddFlaw(request.POST)
-        if form.is_valid():
-          form.save()
-          return HttpResponseRedirect('/map/') 
-    else:
-        if request.method == 'GET' and request.GET.get('extent'):
-          extent_string = request.GET.get('extent')
-          extent = tuple(map(float,extent_string.split(',')))
-        form = AddFlaw()
-    template_vars = {'form': form,'extent' : extent, 'GMAP_API_KEY': settings.GMAP_API_KEY,'enable_maps':settings.ENABLE_GMAPS}
-    context = RequestContext(request,template_vars)
-    return render_to_response('flaws/post_flaw.html',context)
- 
-def as_kml(request):
-    flaws  = Flaws.objects.kml()
-    return render_to_kml("kml/placemarks.kml", {'places' : flaws})
-
-def all_flaws(request):
-    set = Flaws.objects.all()
-    return render_to_geojson(set,mimetype='text/plain')
-
-def flaws_by_tag(request,tag_id):
-    query_tag = Tag.objects.get(id=tag_id)
-    entries = TaggedItem.objects.get_by_model(Flaws, query_tag.name)
-    #entries = entries.order_by('-date')
-    return render_to_geojson(entries,mimetype='text/plain')
-
-def flaws_by_severity(request,severity):
-    set = Flaws.objects.filter(severity__gte=int(severity))
-    return render_to_geojson(set,mimetype='text/plain')
-
-# Same as all_flaws() but will prompt browser to download the geojson features
-def as_geojson(request):
-    set = Flaws.objects.all()
-    return render_to_geojson(set,mimetype='application/json')
