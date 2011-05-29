@@ -71,7 +71,9 @@ def splash(request):
 
 def main_page(request):
     # Fetch the first 3 events... need to add the order by date
-    m = [x.geometry.geojson for x in UserProfile.objects.all()]
+    users = UserProfile.objects.all()
+    users.transform(900913)
+    m = [x.geometry.geojson for x in users]
     e = Event.objects.count()
     events = Event.objects.all()[:3]
     extent = '(-13644621.04,6028561.02, -13598758.82,6057607.09)'
