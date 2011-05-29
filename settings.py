@@ -111,7 +111,8 @@ INSTALLED_APPS = (
     'modelviz',
     'shapes',
     'tagging',
-
+    'django_extensions',
+    'south'
 )
 
 # add a file next to this settings.py file called 'local_settings.py' that overrides any database settings or other 
