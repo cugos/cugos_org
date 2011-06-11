@@ -3,7 +3,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.models import User
 from django.db import models
 
-from voting.managers import VoteManager
+from cugos_org.voting.managers import VoteManager
 
 SCORES = (
     (u'+1', +1),

@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.http import HttpResponse
 from django.conf import settings
-from tagging.models import Tag, TaggedItem
+from cugos_org.tagging.models import Tag, TaggedItem
 from django.contrib.gis.feeds import Feed
 
 # Django authentication 'decorator' - not needed now, but eventually we'll need to 
@@ -17,11 +17,11 @@ from django.contrib.gis.geos import fromstr
 from django.contrib.gis.geos import Point
 
 # Models and forms for our app
-from cugos_main.models import *
-from profiles.models import *
-from cugos_main.shortcuts import render_to_geojson
+from cugos_org.cugos_main.models import *
+from cugos_org.profiles.models import *
+from cugos_org.cugos_main.shortcuts import render_to_geojson
 
-from shapes.views import ShpResponder
+from cugos_org.shapes.views import ShpResponder
 import urllib
 
 # geocoding module

@@ -1,6 +1,6 @@
 from django.contrib.gis import admin
-from batchadmin.admin import BatchModelAdmin
-from profiles.models import *
+from cugos_org.batchadmin.admin import BatchModelAdmin
+from cugos_org.profiles.models import *
 
 class BA(BatchModelAdmin):
   actions_on_top = False

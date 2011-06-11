@@ -5,7 +5,7 @@ application.
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
 
-from tagging.models import Tag, TaggedItem
+from cugos_org.tagging.models import Tag, TaggedItem
 
 class ModelTagManager(models.Manager):
     """

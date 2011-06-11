@@ -1,5 +1,5 @@
 from django.contrib.gis import admin
-from cugos_main.models import *
+from cugos_org.cugos_main.models import *
 
 class ProjectAdmin(admin.OSMGeoAdmin):
     #list_display = ('name')

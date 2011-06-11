@@ -15,7 +15,7 @@ from django.views.generic.list_detail import object_list
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
-from profiles import utils
+from cugos_org.profiles import utils
 
 
 def create_profile(request, form_class=None, success_url=None,

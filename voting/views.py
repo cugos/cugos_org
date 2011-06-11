@@ -5,7 +5,7 @@ from django.contrib.auth.views import redirect_to_login
 from django.template import loader, RequestContext
 from django.utils import simplejson
 
-from voting.models import Vote
+from cugos_org.voting.models import Vote
 
 VOTE_DIRECTIONS = (('up', 1), ('down', -1), ('clear', 0))
 

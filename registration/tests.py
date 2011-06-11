@@ -29,9 +29,9 @@ from django.core import management
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 
-from registration import forms
-from registration.models import RegistrationProfile
-from registration import signals
+from cugos_org.registration import forms
+from cugos_org.registration.models import RegistrationProfile
+from cugos_org.registration import signals
 
 
 class RegistrationTestCase(TestCase):

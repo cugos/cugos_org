@@ -1,0 +1,5 @@
+ id |    name    |       description       |          url          |                      geometry                      
+----+------------+-------------------------+-----------------------+----------------------------------------------------
+  1 | Test Event | This is the description | http://www.cugos.org/ | 0101000020E61000004BBDE8FFFF3B0EC046BCC130BEF51940
+(1 row)
+

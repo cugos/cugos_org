@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from registration.models import RegistrationProfile
+from cugos_org.registration.models import RegistrationProfile
 
 
 # I put this on all required fields, because it's easier to pick up

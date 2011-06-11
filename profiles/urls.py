@@ -24,7 +24,7 @@ redirect. If you don't use that name, remember to explicitly pass
 
 from django.conf.urls.defaults import *
 
-from profiles import views
+from cugos_org.profiles import views
 
 
 urlpatterns = patterns('',

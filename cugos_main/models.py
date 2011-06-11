@@ -1,5 +1,5 @@
 from django.contrib.gis.db import models
-from tagging.fields import TagField
+from cugos_org.tagging.fields import TagField
 
 class Project(models.Model):
     name = models.CharField(max_length=50)

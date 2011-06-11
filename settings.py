@@ -88,7 +88,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'cugos_org.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(ROOT_PROJECT_FOLDER, 'templates'),
@@ -102,15 +102,15 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.gis',
     'django.contrib.flatpages',
-    'batchadmin',
-    'registration',
-    'profiles',
+    'cugos_org.batchadmin',
+    'cugos_org.registration',
+    'cugos_org.profiles',
     'django.contrib.humanize',
-    'cugos_main',
-    'voting',
-    'modelviz',
-    'shapes',
-    'tagging',
+    'cugos_org.cugos_main',
+    'cugos_org.voting',
+    'cugos_org.modelviz',
+    'cugos_org.shapes',
+    'cugos_org.tagging',
     'django_extensions',
     'south'
 )

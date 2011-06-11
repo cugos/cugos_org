@@ -2,8 +2,8 @@ from django.contrib.gis import admin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.safestring import mark_safe
 from django.utils.text import capfirst
-from batchadmin.forms import ActionForm, checkbox, CHECKBOX_NAME
-from batchadmin.util import model_format_dict, model_ngettext, get_changelist
+from cugos_org.batchadmin.forms import ActionForm, checkbox, CHECKBOX_NAME
+from cugos_org.batchadmin.util import model_format_dict, model_ngettext, get_changelist
 
 
 class BatchModelAdmin(admin.OSMGeoAdmin):
