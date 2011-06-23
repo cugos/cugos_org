@@ -11,3 +11,7 @@ admin-media
 *.o
 *.so
 *.pyc
+
+# Folders #
+###########
+logging

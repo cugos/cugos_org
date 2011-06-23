@@ -2,6 +2,7 @@ import datetime
 import random
 import re
 import sha
+import hashlib
 
 from django.conf import settings
 from django.contrib.auth.models import User

@@ -7,8 +7,8 @@ MEDIA_ROOT = os.path.join(ROOT_PROJECT_FOLDER,'media')
 
 
 
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -65,6 +65,7 @@ USE_I18N = True
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
+ADMIN_MEDIA_ROOT = os.path.join(ROOT_PROJECT_FOLDER, 'admin_media')
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -92,6 +93,7 @@ ROOT_URLCONF = 'cugos_org.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(ROOT_PROJECT_FOLDER, 'templates'),
+    '/usr/lib/pymodules/python2.6/django/contrib/databrowse/templates',
 )
 
 INSTALLED_APPS = (
@@ -102,10 +104,11 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.gis',
     'django.contrib.flatpages',
+    'django.contrib.humanize',
+    'django.contrib.databrowse',
     'cugos_org.batchadmin',
     'cugos_org.registration',
     'cugos_org.profiles',
-    'django.contrib.humanize',
     'cugos_org.cugos_main',
     'cugos_org.voting',
     'cugos_org.modelviz',
